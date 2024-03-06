@@ -1,0 +1,497 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar 10 20:22:18 2022
+# Process ID: 6740
+# Current directory: F:/Vivado Projects/lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4208 F:\Vivado Projects\lab4\lab4.xpr
+# Log file: F:/Vivado Projects/lab4/vivado.log
+# Journal file: F:/Vivado Projects/lab4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/Vivado Projects/lab4/lab4.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 911.590 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Vivado Projects/lab4/lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'integrate' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Vivado Projects/lab4/lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj integrate_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab4/lab4.srcs/sources_1/new/dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab4/lab4.srcs/sources_1/new/seven_seg_decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab4/lab4.srcs/sources_1/new/integrate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module integrate
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab4/lab4.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado Projects/lab4/lab4.sim/sim_1/behav/xsim'
+"xelab -wto 0a5fdf857105489293fbc7b91dab53b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot integrate_behav xil_defaultlib.integrate xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0a5fdf857105489293fbc7b91dab53b4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot integrate_behav xil_defaultlib.integrate xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [F:/Vivado Projects/lab4/lab4.srcs/sources_1/new/integrate.v:10]
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [F:/Vivado Projects/lab4/lab4.srcs/sources_1/new/integrate.v:11]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/Vivado Projects/lab4/lab4.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/Vivado Projects/lab4/lab4.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+[Thu Mar 10 20:23:37 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab4/lab4.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Thu Mar 10 20:24:44 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab4/lab4.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+close_project
+create_project lab6 {F:/Vivado Projects/lab6} -part xc7a50tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+file mkdir F:/Vivado Projects/lab6/lab6.srcs/sources_1/new
+file mkdir F:/Vivado Projects/lab6/lab6.srcs/sources_1/new
+file mkdir F:/Vivado Projects/lab6/lab6.srcs/sources_1/new
+file mkdir F:/Vivado Projects/lab6/lab6.srcs/sources_1/new
+file mkdir F:/Vivado Projects/lab6/lab6.srcs/sources_1/new
+file mkdir F:/Vivado Projects/lab6/lab6.srcs/sources_1/new
+file mkdir {F:/Vivado Projects/lab6/lab6.srcs/sources_1/new}
+close [ open {F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v} w ]
+add_files {{F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v}}
+update_compile_order -fileset sources_1
+close [ open {F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v} w ]
+add_files {{F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v}}
+update_compile_order -fileset sources_1
+close [ open {F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegController.v} w ]
+add_files {{F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegController.v}}
+update_compile_order -fileset sources_1
+close [ open {F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v} w ]
+add_files {{F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v}}
+update_compile_order -fileset sources_1
+close [ open {F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v} w ]
+add_files {{F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Users/harut/Downloads/lab6.xdc
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'SevenSegDisp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SevenSegDisp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegController.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegController
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slowerClkGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upcounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegDisp
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xelab -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'CA' on this module [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:18]
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:18]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'SevenSegDisp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SevenSegDisp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegController.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegController
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slowerClkGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upcounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegDisp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xelab -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'CA' on this module [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:18]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_runs impl_1 -jobs 6
+[Fri Mar 11 01:04:58 2022] Launched synth_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/synth_1/runme.log
+[Fri Mar 11 01:04:58 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+[Fri Mar 11 01:07:13 2022] Launched synth_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/synth_1/runme.log
+[Fri Mar 11 01:07:13 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+[Fri Mar 11 01:10:59 2022] Launched synth_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/synth_1/runme.log
+[Fri Mar 11 01:11:00 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Mar 11 01:12:21 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+set_property PROGRAM.FILE {F:/Vivado Projects/lab6/lab6.runs/impl_1/SevenSegDisp.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {F:/Vivado Projects/lab6/lab6.runs/impl_1/SevenSegDisp.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'SevenSegDisp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SevenSegDisp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegController.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegController
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slowerClkGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upcounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegDisp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xelab -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'Q' [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:17]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'y' [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:19]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.slowerClkGen
+Compiling module xil_defaultlib.upcounter
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.SevenSegController
+Compiling module xil_defaultlib.SevenSegDisp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SevenSegDisp_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source F:/Vivado -notrace
+couldn't read file "F:/Vivado": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Fri Mar 11 01:17:49 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SevenSegDisp_behav -key {Behavioral:sim_1:Functional:SevenSegDisp} -tclbatch {SevenSegDisp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source SevenSegDisp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SevenSegDisp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2210.965 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/Vivado Projects/lab6/lab6.runs/synth_1
+
+launch_runs impl_1 -jobs 6
+[Fri Mar 11 01:18:44 2022] Launched synth_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/synth_1/runme.log
+[Fri Mar 11 01:18:44 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Mar 11 01:20:05 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {F:/Vivado Projects/lab6/lab6.runs/impl_1/SevenSegDisp.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/Vivado Projects/lab6/lab6.runs/synth_1
+
+launch_runs impl_1 -jobs 6
+[Fri Mar 11 01:28:26 2022] Launched synth_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/synth_1/runme.log
+[Fri Mar 11 01:28:26 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/Vivado Projects/lab6/lab6.runs/synth_1
+
+launch_runs impl_1 -jobs 6
+[Fri Mar 11 01:29:41 2022] Launched synth_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/synth_1/runme.log
+[Fri Mar 11 01:29:41 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Mar 11 01:31:16 2022] Launched impl_1...
+Run output will be captured here: F:/Vivado Projects/lab6/lab6.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {F:/Vivado Projects/lab6/lab6.runs/impl_1/SevenSegDisp.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+INFO: [Labtools 27-1435] Device xc7a50t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a50t (JTAG device index = 0) is not programmed (DONE status = 0).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+INFO: [Labtools 27-1435] Device xc7a50t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'SevenSegDisp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SevenSegDisp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegController.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegController
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slowerClkGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upcounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegDisp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xelab -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'Q' [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:18]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.slowerClkGen
+Compiling module xil_defaultlib.upcounter
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.SevenSegController
+Compiling module xil_defaultlib.SevenSegDisp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SevenSegDisp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "SevenSegDisp_behav -key {Behavioral:sim_1:Functional:SevenSegDisp} -tclbatch {SevenSegDisp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source SevenSegDisp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'SevenSegDisp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2354.652 ; gain = 0.000
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'SevenSegDisp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SevenSegDisp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slowerClkGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upcounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegDisp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xelab -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:8]
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:9]
+ERROR: [VRFC 10-2538] module instantiation should have an instance name [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:10]
+ComMsgMgrException: > not found while processing module instance <%s>: Invalid c_string in format.
+
+ERROR: [VRFC 10-2063] Module <seven_seg> not found while processing module instance <'Undefined'>
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'SevenSegDisp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj SevenSegDisp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/slowerClkGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slowerClkGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/upcounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upcounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SevenSegDisp
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim'
+"xelab -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0af1687a93214b4aa664a298facc08d7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SevenSegDisp_behav xil_defaultlib.SevenSegDisp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <seven_seg> not found while processing module instance <sev> [F:/Vivado Projects/lab6/lab6.srcs/sources_1/new/SevenSegDisp.v:11]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/Vivado Projects/lab6/lab6.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B308EBA
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 11 03:03:04 2022...
